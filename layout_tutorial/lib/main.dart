@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
     const String appTitle = 'Flutter layout demo';
     return MaterialApp(
       title: appTitle,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(title: const Text(appTitle)),
           body: const SingleChildScrollView(
