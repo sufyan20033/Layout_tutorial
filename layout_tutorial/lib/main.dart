@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(title: const Text(appTitle)),
           body: const SingleChildScrollView(
-            child: Column(
-              children: [
-
-              ]
-              )                 
-              )
+              child: Column(children: [
+            TitleSection(
+              name: 'Oeschinen Lake Campground',
+              location: 'Kandersteg, Switzerland',
             ),
+          ]))),
     );
   }
 }
