@@ -14,22 +14,26 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(title: const Text(appTitle)),
           body: const SingleChildScrollView(
-              child: Column(children: [
-            TitleSection(
-              name: 'Oeschinen Lake Campground',
-              location: 'Kandersteg, Switzerland',
-            ),
-            ButtonSection(),
+              child: Column(
+                children: [
+                  ImageSection(
+                    image: 'images/lake.jpg',
+                  ),
+                  TitleSection(
+                    name: 'Oeschinen Lake Campground',
+                    location: 'Kandersteg, Switzerland',
+                  ),
+                  ButtonSection(),
             TextSection(
-    description:
-        'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
-        'Bernese Alps. Situated 1,578 meters above sea level, it '
-        'is one of the larger Alpine Lakes. A gondola ride from '
-        'Kandersteg, followed by a half-hour walk through pastures '
-        'and pine forest, leads you to the lake, which warms to 20 '
-        'degrees Celsius in the summer. Activities enjoyed here '
-        'include rowing, and riding the summer toboggan run.',
-  ),
+              description:
+                  'Lake Oeschinen lies at the foot of the Blüemlisalp in the '
+                  'Bernese Alps. Situated 1,578 meters above sea level, it '
+                  'is one of the larger Alpine Lakes. A gondola ride from '
+                  'Kandersteg, followed by a half-hour walk through pastures '
+                  'and pine forest, leads you to the lake, which warms to 20 '
+                  'degrees Celsius in the summer. Activities enjoyed here '
+                  'include rowing, and riding the summer toboggan run.',
+            ),
           ]))),
     );
   }
@@ -77,7 +81,7 @@ class ButtonSection extends StatelessWidget {
   const ButtonSection({super.key});
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     final Color color = Theme.of(context).primaryColor;
     return SizedBox(
       child: Row(
@@ -90,10 +94,7 @@ class ButtonSection extends StatelessWidget {
       ),
     );
   }
-
 }
-
-
 
 class ButtonWithText extends StatelessWidget {
   const ButtonWithText({
